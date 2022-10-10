@@ -13,6 +13,25 @@ Other file formats are also possible, but are not considered here.
 [2]: https://www.sphinx-doc.org/en/master/
 [3]: https://docutils.sourceforge.io/rst.html
 
+Add information to MoinMoin pages
+---------------------------------
+
+While the [sphinx-quickstart][5] tool can parse most [MoinMoin][1] pages, there are some cases where we have to insert 
+extra information to some MoinMoin RST pages:
+
+* Cross-page links to section headings in other pages need to have a *custom anchor* inserted above the section heading,
+  for example:
+```
+.. _rst-overview:
+
+RST Overview
+============
+```
+NOTE: This is *only* required for sections that are linked to, and *not* for all sections!
+
+In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
+See [Use a custom anchor](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html#use-a-custom-anchor) for a description.
+
 Extract RST files from MoinMoin
 -------------------------------
 
