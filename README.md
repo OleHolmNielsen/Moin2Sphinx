@@ -18,9 +18,11 @@ Extract RST files from Moin
 
 [MoinMoin][1] stores its Wikis in a top-level directory, and we assume here that the /var/moin directory is used.
 The [writefiles.sh](writefiles.sh) script has to be executed on the server where /var/moin is located:
+
 ```
 Moin-server$ writefiles.sh <wikiname>
 ```
+
 where the ```<wikiname>``` is one of the Wikis in /var/moin.
 The script generates a tar-ball of the newest files in /var/moin/```<wikiname>```/data/pages/
 ignoring all older files (revisions).
@@ -34,10 +36,13 @@ Setup a Python3 virtual environment
 -----------------------------------
 
 We will use a [Python3 virtual environment][4] to process RST files from Moin:
+
 ```
 python3 -m venv venv
 ```
-Activate it and install [Sphinx]:
+
+Activate it and install [Sphinx][2] :
+
 ```
 . venv/bin/activate
 pip install --upgrade pip
@@ -61,12 +66,12 @@ This script will perform these steps:
 
 * Unpack the tar-ball files to a subfolder ```<wikiname>```
 
-* Create [Sphinx] files in a subfolder named ```<wikiname>```-sphinx.
+* Create [Sphinx][2] files in a subfolder named ```<wikiname>```-sphinx.
 
 * Call the [sphinx-quickstart][5] tool to initialize the project.
-  We are going to set the [Sphinx] *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
+  We are going to set the [Sphinx][2] *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
 
-* Run the script ```moin2sphinx.py``` to convert the RST files in subfolder ```<wikiname>``` to [Sphinx] format
+* Run the script ```moin2sphinx.py``` to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
   into the folder ```<wikiname>```-sphinx.
 
 [5]: https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
@@ -76,7 +81,7 @@ Edit the table of contents
 
 Go to the ```<wikiname>```-sphinx folder and edit the file ```index.rst```:
 
-* Delete any page names which you do not want in the [Sphinx] documentation.
+* Delete any page names which you do not want in the [Sphinx][2] documentation.
 
 * Reorder page names in a logical way for the project. 
 
