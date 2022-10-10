@@ -62,7 +62,7 @@ Convert the RST files into Sphinx format
 
 Copy the tar-ball generated above to the current directory.
 
-Run the script moin2sphinx.sh on ```<wikiname>``` with some predefined author names:
+Run the script [moin2sphinx.sh](moin2sphinx.sh) on ```<wikiname>``` with some predefined author names:
 ```
 export AUTHOR="Fullname1[,Fullname2...]"
 ./moin2sphinx.sh <wikiname>
@@ -77,7 +77,7 @@ This script will perform these steps:
 * Call the [sphinx-quickstart][5] tool to initialize the project.
   We are going to set the [Sphinx][2] *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
 
-* Run the script ```moin2sphinx.py``` to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
+* Run the script [moin2sphinx.py](moin2sphinx.py) to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
   into the folder ```<wikiname>```-sphinx.
 
 [5]: https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
