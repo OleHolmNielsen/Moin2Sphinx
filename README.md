@@ -112,18 +112,31 @@ Go to the ```<wikiname>```-sphinx folder and edit the file ```index.rst```:
 
 * Reorder page names in a logical way for the project. 
 
+Change Sphinx page theme
+------------------------
+
+Optional:
+[Sphinx][2] provides a number of builders for HTML and HTML-based formats.
+You can explore [Sphinx themes][7] and edit the file ```<wikiname>```-sphinx/conf.py
+to select a different theme (the default is *alabaster*), for example:
+```
+html_theme = 'classic'
+```
+
+[7]: https://www.sphinx-doc.org/en/master/usage/theming.html
+
 Generate HTML pages
 -------------------
 
-Go to the ```<wikiname>```-sphinx folder and run [sphinx-build][6] to generate HTML pages (the default output format):
+Go to the ```<wikiname>```-sphinx folder and run [sphinx-build][6] to generate HTML pages:
 ```
-make 
+make html
 make dirhtml
 ```
-The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages, but with a single directory per document in _build/dirhtml/.
+The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages, but with a single directory per document in ```_build/dirhtml/```.
 Makes for prettier URLs (no .html) if served from a webserver.
 
-The HTML pages will be built in the _build/html/ and _build/dirhtml/ subfolders with an index.html file
+The HTML pages will be built in the ```_build/html/``` and ```_build/dirhtml/``` subfolders with an index.html file
 which you can use in a browser, for example:
 
 ```
@@ -135,7 +148,7 @@ or copy the files to a web-server.
 To start over the HTML page generation:
 ```
 rm -rf _build
-make 
+make html
 make dirhtml
 ```
 You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
