@@ -8,7 +8,7 @@ MOINDIR=/var/moin
 if [[ $# -ne 1 ]]
 then
 	echo "Usage: $0 <wiki-name>"
-	echo "Wikis in $MOINDIR include:"
+	echo "Directories in $MOINDIR may include some Wikis:"
 	ls -l $MOINDIR
 	exit 1
 fi
