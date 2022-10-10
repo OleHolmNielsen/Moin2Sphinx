@@ -67,6 +67,7 @@ Run the script [moin2sphinx.sh](moin2sphinx.sh) on ```<wikiname>``` with some pr
 export AUTHOR="Fullname1[,Fullname2...]"
 ./moin2sphinx.sh <wikiname>
 ```
+Here you may also add the E-mail address to the author name.
 
 This script will perform these steps:
 
@@ -103,3 +104,10 @@ The HTML pages will be built in the _build/html/ subfolder with an index.html fi
 ```
 firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/html/index.html
 ```
+
+To start over the HTML page generation:
+```
+rm -f _build
+make html
+```
+You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
