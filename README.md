@@ -13,8 +13,8 @@ Other file formats are also possible, but are not considered here.
 [2]: https://www.sphinx-doc.org/en/master/
 [3]: https://docutils.sourceforge.io/rst.html
 
-Extract RST files from Moin
----------------------------
+Extract RST files from MoinMoin
+-------------------------------
 
 [MoinMoin][1] stores its Wikis in a top-level directory, and we assume here that the /var/moin directory is used.
 The [writefiles.sh](writefiles.sh) script has to be executed on the server where /var/moin is located:
@@ -29,13 +29,13 @@ ignoring all older files (revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
 we simply copy the files and append an ```.rst``` extension.
 
-Some Moin directories have separators such as (2d), (2e) of (2f), and these are rewritten in the script.
+Some [MoinMoin][1] directories have separators such as (2d), (2e) of (2f), and these are rewritten in the script.
 Look for the ```mungedname=``` line and modify as needed for your Wiki.
 
 Setup a Python3 virtual environment
 -----------------------------------
 
-We will use a [Python3 virtual environment][4] to process RST files from Moin:
+We will use a [Python3 virtual environment][4] to process RST files from [MoinMoin][1]:
 
 ```
 python3 -m venv venv
