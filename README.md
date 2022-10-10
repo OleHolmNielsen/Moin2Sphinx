@@ -21,8 +21,8 @@ The [writefiles.sh](writefiles.sh) script is executed on the server where /var/m
 ```
 writefiles.sh <wikiname>
 ```
-where the <wikiname> is one of the Wikis in /var/moin.
-The script generates a tar-ball of the newest files in /var/moin/<wikiname>/data/pages/
+where the ```<wikiname>``` is one of the Wikis in /var/moin.
+The script generates a tar-ball of the newest files in /var/moin/```<wikiname>```data/pages/
 ignoring all older files (revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
 we simply copy the files and append an ```.rst``` extension.
@@ -51,7 +51,7 @@ Convert the RST files into Sphinx format
 
 Copy the tar-ball generated above to the current directory.
 
-Run the script moin2sphinx.sh on <wikiname> with some predefined author names:
+Run the script moin2sphinx.sh on ```<wikiname>``` with some predefined author names:
 ```
 export AUTHOR="Fullname1[,Fullname2...]"
 ./moin2sphinx.sh <wikiname>
@@ -59,22 +59,22 @@ export AUTHOR="Fullname1[,Fullname2...]"
 
 This script will perform these steps:
 
-* Unpack the tar-ball files to a subfolder <wikiname>.
+* Unpack the tar-ball files to a subfolder ```<wikiname>```
 
-* Create Sphinx files in a subfolder named <wikiname>-sphinx.
+* Create Sphinx files in a subfolder named ```<wikiname>```-sphinx.
 
 * Call the [sphinx-quickstart][5] tool to initialize the project.
-  We are going to set the Sphinx *Project name* to <wikiname> (with first letter capitalized), and the version to 1.0.
+  We are going to set the Sphinx *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
 
-* Run the script ```moin2sphinx.py``` to convert the RST files in subfolder <wikiname> to Sphinx format
-  into the folder <wikiname>-sphinx.
+* Run the script ```moin2sphinx.py``` to convert the RST files in subfolder ```<wikiname>``` to Sphinx format
+  into the folder ```<wikiname>```-sphinx.
 
 [5]: https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
 
 Edit the table of contents
 --------------------------
 
-Go to the <wikiname>-sphinx folder and edit the file ```index.rst```:
+Go to the ```<wikiname>```-sphinx folder and edit the file ```index.rst```:
 
 * Delete any page names which you do not want in the Sphinx documentation.
 
@@ -83,12 +83,12 @@ Go to the <wikiname>-sphinx folder and edit the file ```index.rst```:
 Generate HTML pages
 -------------------
 
-Go to the <wikiname>-sphinx folder and run:
+Go to the ```<wikiname>```-sphinx folder and run:
 ```
 make html
 ```
 The HTML pages will be built in the _build/html/ subfolder with an index.html file which you can use in a browser, for example:
 
 ```
-firefox file://<path-to-project>/<wikiname>-sphinx/_build/html/index.html
+firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/html/index.html
 ```
