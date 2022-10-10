@@ -118,16 +118,24 @@ Generate HTML pages
 Go to the ```<wikiname>```-sphinx folder and run [sphinx-build][6] to generate HTML pages (the default output format):
 ```
 make 
+make dirhtml
 ```
-The HTML pages will be built in the _build/html/ subfolder with an index.html file which you can use in a browser, for example:
+The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages, but with a single directory per document in _build/dirhtml/.
+Makes for prettier URLs (no .html) if served from a webserver.
+
+The HTML pages will be built in the _build/html/ and _build/dirhtml/ subfolders with an index.html file
+which you can use in a browser, for example:
 
 ```
 firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/html/index.html
+firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/dirhtml/index.html
 ```
+or copy the files to a web-server.
 
 To start over the HTML page generation:
 ```
 rm -rf _build
 make 
+make dirhtml
 ```
 You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
