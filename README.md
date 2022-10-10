@@ -17,12 +17,12 @@ Extract RST files from Moin
 ---------------------------
 
 [MoinMoin][1] stores its Wikis in a top-level directory, and we assume here that the /var/moin directory is used.
-The [writefiles.sh](writefiles.sh) script is executed on the server where /var/moin is located:
+The [writefiles.sh](writefiles.sh) script has to be executed on the server where /var/moin is located:
 ```
-writefiles.sh <wikiname>
+Moin-server$ writefiles.sh <wikiname>
 ```
 where the ```<wikiname>``` is one of the Wikis in /var/moin.
-The script generates a tar-ball of the newest files in /var/moin/```<wikiname>```data/pages/
+The script generates a tar-ball of the newest files in /var/moin/```<wikiname>```/data/pages/
 ignoring all older files (revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
 we simply copy the files and append an ```.rst``` extension.
