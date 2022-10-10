@@ -33,8 +33,8 @@ OMIT_PATTERNS="HelpOnMacros WikiCourse AdminGroup BadContent "
 Also, some [MoinMoin][1] directories have separators such as (2d), (2e) of (2f), and these are rewritten in the script.
 Look for the ```mungedname=``` line and add any additional rewritings as needed for your Wiki.
 
-The script generates a tar-ball of the newest files in /var/moin/```<wikiname>```/data/pages/
-ignoring all older files (revisions).
+The [writefiles.sh](writefiles.sh) script generates a tar-ball of the newest files in /var/moin/```<wikiname>```/data/pages/.
+It will ignore all older files (previous page revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
 we simply copy the files and append an ```.rst``` extension.
 
