@@ -128,13 +128,15 @@ html_theme = 'classic'
 Generate HTML pages
 -------------------
 
-Go to the ```<wikiname>```-sphinx folder and run [sphinx-build][6] to generate HTML pages:
+Go to the ```<wikiname>```-sphinx folder and do a *make* to execute [sphinx-build][6] and generate the HTML pages:
 ```
 make html
 make dirhtml
 ```
 The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages, but with a single directory per document in ```_build/dirhtml/```.
 Makes for prettier URLs (no .html) if served from a webserver.
+Also, this will make the web-page URLs have the same names as with [MoinMoin][1]
+(otherwise you will have to use .html URLs).
 
 The HTML pages will be built in the ```_build/html/``` and ```_build/dirhtml/``` subfolders with an index.html file
 which you can use in a browser, for example:
