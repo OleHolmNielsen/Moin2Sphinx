@@ -24,6 +24,12 @@ Moin-server$ writefiles.sh <wikiname>
 ```
 
 where the ```<wikiname>``` is one of the Wikis in /var/moin.
+
+First you must edit the script to omit these page patterns and add other pages/patterns that you do not want to convert:
+```
+OMIT_PATTERNS="HelpOnMacros WikiCourse AdminGroup BadContent "
+```
+
 The script generates a tar-ball of the newest files in /var/moin/```<wikiname>```/data/pages/
 ignoring all older files (revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
