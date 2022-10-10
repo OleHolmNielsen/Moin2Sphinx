@@ -16,8 +16,8 @@ Other file formats are also possible, but are not considered here.
 Add information to MoinMoin pages
 ---------------------------------
 
-While the [sphinx-quickstart][5] tool can parse most [MoinMoin][1] pages, there are some cases where we have to insert 
-extra information to some MoinMoin RST pages:
+While the [sphinx-build][6] tool (used below) can parse most [MoinMoin][1] pages,
+there are some cases where we have to insert extra information into some MoinMoin RST pages:
 
 * Cross-page links to section headings in other pages need to have a *custom anchor* inserted above the section heading,
   for example:
@@ -101,6 +101,7 @@ This script will perform these steps:
   into the folder ```<wikiname>```-sphinx.
 
 [5]: https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
+[6]: https://www.sphinx-doc.org/en/master/man/sphinx-build.html
 
 Edit the table of contents
 --------------------------
@@ -114,9 +115,9 @@ Go to the ```<wikiname>```-sphinx folder and edit the file ```index.rst```:
 Generate HTML pages
 -------------------
 
-Go to the ```<wikiname>```-sphinx folder and run:
+Go to the ```<wikiname>```-sphinx folder and run [sphinx-build][6] to generate HTML pages (the default output format):
 ```
-make html
+make 
 ```
 The HTML pages will be built in the _build/html/ subfolder with an index.html file which you can use in a browser, for example:
 
@@ -126,7 +127,7 @@ firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/html/index.html
 
 To start over the HTML page generation:
 ```
-rm -f _build
-make html
+rm -rf _build
+make 
 ```
 You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
