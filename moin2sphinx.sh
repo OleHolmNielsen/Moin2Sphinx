@@ -12,6 +12,8 @@ fi
 WIKI=$1
 TARBALL=$WIKI.tar.gz
 SPHINXDIR=${WIKI}-sphinx
+# Configure Sphinx template directory to be current directory (see sphinx-quickstart -h):
+SPHINXTEMPLATE="--templatedir ."
 
 # Check if the $WIKI/ directory was already created
 if [[ -d $WIKI ]]
@@ -50,8 +52,9 @@ else
 	echo Create a Sphinx directory ${SPHINXDIR}
 	mkdir -pv ${SPHINXDIR}
 	cp moin2sphinx.py ${SPHINXDIR}/
-	echo Setup Sphinx
-	sphinx-quickstart --quiet -p "$WIKI" -v $VERSION -a "$AUTHOR" -l $LANGUAGE ${SPHINXDIR}
+	echo Setup Sphinx with:
+	echo sphinx-quickstart --quiet -p "$WIKI" -v $VERSION -a "$AUTHOR" -l $LANGUAGE ${SPHINXTEMPLATE} ${SPHINXDIR}
+	sphinx-quickstart --quiet -p "$WIKI" -v $VERSION -a "$AUTHOR" -l $LANGUAGE ${SPHINXTEMPLATE} ${SPHINXDIR}
 fi
 
 echo Convert Moin files to Sphinx syntax in directory ${SPHINXDIR}
@@ -62,7 +65,7 @@ python3 moin2sphinx.py ../${WIKI}/ . ${WIKI^}
 
 cat <<EOF
 Now you can go to ${SPHINXDIR} 
-Review and edit the index file index.rst
-Then do a 'make html'.
+Review and edit the index file index.rst to order lines as you prefer.
+Then do a 'make dirhtml' or 'make html'.
 The HTML pages will be built in the _build/html/ folder.
 EOF
