@@ -141,6 +141,17 @@ and edit this file to select a different theme (the default is *alabaster*), for
 ```
 html_theme = 'classic'
 ```
+There are also externally provided themes such as the [sphinx-rtd-theme][9] which you can install with:
+```
+pip install sphinx-rtd-theme
+```
+and define in ```conf.py``` or ```conf.py_t``` with:
+```
+html_theme = 'sphinx-rtd-theme'
+```
+
+[9]: https://github.com/readthedocs/sphinx_rtd_theme
+
 When you run the [moin2sphinx.sh](moin2sphinx.sh) script, it will use the
 current directory for [sphinx-quickstart][5] templates like:
 ```
