@@ -129,8 +129,8 @@ see [Sphinx themes][7].
 The [sphinx-quickstart][5] tool may work with a number of **templates**,
 see the manual section on *Project templating options for sphinx-quickstart*.
 
-The [Sphinx themes][7] may be defined in the template file *conf.py_t*.
-You can copy a *conf.py* (created as above) to the top-level directory and use it for all future Wiki pages:
+The [Sphinx themes][7] may be defined in the template file ```conf.py_t```.
+You can copy a ```conf.py``` (created as above) to the top-level directory and use it for all future Wiki pages:
 ```
 cp <wikiname>-sphinx/conf.py conf.py_t
 ```
@@ -143,7 +143,7 @@ current directory for [sphinx-quickstart][5] templates like:
 ```
 sphinx-quickstart --templatedir . <further options...>
 ```
-and pick up the *conf.py_t* template file and use it when creating ```<wikiname>-sphinx/conf.py```.
+and pick up the ```conf.py_t``` template file and use it when creating ```<wikiname>-sphinx/conf.py```.
 
 [7]: https://www.sphinx-doc.org/en/master/usage/theming.html
 
