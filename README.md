@@ -190,9 +190,10 @@ You refer to the attachment like this:
 The latest version of FooBar is available as FooBar.tar.gz__
 __ attachment:FooBar.tar.gz
 ```
+This seems to be a special feature of [MoinMoin][1].
 
 [Sphinx][2] has a different method (role) to [reference downloadable files][8].
-The equivalent method is:
+The way to include downloadable attachment files is:
 ```
 The latest version of FooBar is available as :download:`FooBar.tar.gz <FooBar.tar.gz>`
 ```
