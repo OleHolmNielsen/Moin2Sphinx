@@ -97,15 +97,15 @@ Here you may also add the E-mail address to the author name.
 
 This script will perform these steps:
 
-* Unpack the tar-ball files to a subfolder ```<wikiname>```
+* Unpacks the tar-ball files to a subfolder ```<wikiname>```
 
-* Create [Sphinx][2] files in a subfolder named ```<wikiname>```-sphinx.
+* Creates [Sphinx][2] files in a subfolder named ```<wikiname>```-sphinx.
 
-* Call the [sphinx-quickstart][5] interactive tool that asks some questions about your project
+* Calls the [sphinx-quickstart][5] tool that asks some questions about your project
   and then generates a complete documentation directory and sample ```Makefile``` to be used with [sphinx-build][6].
   We are going to set the [Sphinx][2] *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
 
-* Run the script [moin2sphinx.py](moin2sphinx.py) to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
+* Runs the script [moin2sphinx.py](moin2sphinx.py) to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
   into the folder ```<wikiname>```-sphinx.
 
 [5]: https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
@@ -120,15 +120,28 @@ Go to the ```<wikiname>```-sphinx folder and edit the file ```index.rst```:
 
 * Reorder page names in a logical way for the project. 
 
-Change Sphinx page theme
-------------------------
+Change Sphinx page theme (optional)
+-----------------------------------
 
-Optional:
-[Sphinx][2] provides a number of builders for HTML and HTML-based formats.
-You can explore [Sphinx themes][7] and edit the file ```<wikiname>```-sphinx/conf.py
-to select a different theme (the default is *alabaster*), for example:
+[Sphinx][2] provides a number of builders for HTML and HTML-based formats,
+see [Sphinx themes][7].
+
+The [sphinx-quickstart][5] tool may work with a number of **templates**,
+see the manual section on *Project templating options for sphinx-quickstart*.
+
+The [Sphinx themes][7] may be defined in the template file *conf.py_t*.
+You can copy a *conf.py* created as above and use it for all future Wiki pages:
 ```
-html_theme = 'classic'
+cp <wikiname>-sphinx/conf.py conf.py_t
+```
+and edit this file to select a different theme (the default is *alabaster*), for example:
+```
+html_theme = 'scrolls'
+```
+When you run the [moin2sphinx.sh](moin2sphinx.sh) script, it will use the
+current directory for [sphinx-quickstart][5] templates like:
+```
+sphinx-quickstart --templatedir . <further options...>
 ```
 
 [7]: https://www.sphinx-doc.org/en/master/usage/theming.html
