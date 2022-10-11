@@ -143,7 +143,7 @@ current directory for [sphinx-quickstart][5] templates like:
 ```
 sphinx-quickstart --templatedir . <further options...>
 ```
-and pick up the *conf.py_t* template file.
+and pick up the *conf.py_t* template file and use it when creating ```<wikiname>-sphinx/conf.py```.
 
 [7]: https://www.sphinx-doc.org/en/master/usage/theming.html
 
