@@ -63,6 +63,7 @@ Setup a Python3 virtual environment
 We will use a [Python3 virtual environment][4] to process RST files from [MoinMoin][1]:
 
 ```
+yum install python3 
 python3 -m venv venv
 ```
 
@@ -100,7 +101,8 @@ This script will perform these steps:
 
 * Create [Sphinx][2] files in a subfolder named ```<wikiname>```-sphinx.
 
-* Call the [sphinx-quickstart][5] tool to initialize the project.
+* Call the [sphinx-quickstart][5] interactive tool that asks some questions about your project
+  and then generates a complete documentation directory and sample ```Makefile``` to be used with [sphinx-build][6].
   We are going to set the [Sphinx][2] *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
 
 * Run the script [moin2sphinx.py](moin2sphinx.py) to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
