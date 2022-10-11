@@ -91,11 +91,12 @@ Copy the tar-ball generated above to the current directory.
 Define some predefined author names as an environment variable:
 ```
 export AUTHOR="Fullname1[,Fullname2...]"
-./moin2sphinx.sh <wikiname>
 ```
-Here you may also add the E-mail address to the author name.
 
 Run the script [moin2sphinx.sh](moin2sphinx.sh) on ```<wikiname>```:
+```
+./moin2sphinx.sh <wikiname>
+```
 This script will perform these steps:
 
 * Unpacks the tar-ball files to a subfolder ```<wikiname>```
