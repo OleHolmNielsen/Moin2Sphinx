@@ -74,6 +74,12 @@ pip install --upgrade pip
 pip install sphinx
 ```
 
+Alternatively, install Python3 RPM packages from the OS:
+```
+yum install python3 python3-pip
+pip3 install sphinx
+```
+
 [4]: https://docs.python.org/3/library/venv.html
 
 Convert the RST files into Sphinx format
