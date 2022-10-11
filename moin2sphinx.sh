@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Scipt for converting MoinMoin Wiki RST files to Sphinx format
+# Script for converting MoinMoin Wiki RST files to Sphinx format using sphinx-quickstart
+# The sphinx-quickstart manual is at https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
 
 if [[ $# -ne 1 ]]
 then
@@ -12,7 +13,8 @@ fi
 WIKI=$1
 TARBALL=$WIKI.tar.gz
 SPHINXDIR=${WIKI}-sphinx
-# Configure Sphinx template directory to be current directory (see sphinx-quickstart -h):
+# Configure Sphinx template directory to be current directory
+# See sphinx-quickstart -h and the manual section "Project templating"
 SPHINXTEMPLATE="--templatedir ."
 
 # Check if the $WIKI/ directory was already created
@@ -36,7 +38,7 @@ else
 	exit -1
 fi
 
-# Initialize the Sphinx directory
+# Initialize the Sphinx directory with sphinx-quickstart
 if [[ -d $SPHINXDIR ]]
 then
 	echo Directory $SPHINXDIR already exists, skipping sphinx-quickstart initialization
