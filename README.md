@@ -139,14 +139,14 @@ cp <wikiname>-sphinx/conf.py conf.py_t
 ```
 and edit this file to select a different theme (the default is *alabaster*), for example:
 ```
-html_theme = 'scrolls'
+html_theme = 'classic'
 ```
 When you run the [moin2sphinx.sh](moin2sphinx.sh) script, it will use the
 current directory for [sphinx-quickstart][5] templates like:
 ```
 sphinx-quickstart --templatedir . <further options...>
 ```
-and pick up the ```conf.py_t``` template file and use it when creating ```<wikiname>-sphinx/conf.py```.
+and pick up the ```conf.py_t``` template file and use it when creating a new ```<wikiname>-sphinx/conf.py```.
 
 [7]: https://www.sphinx-doc.org/en/master/usage/theming.html
 
@@ -176,7 +176,26 @@ or copy the files to a web-server.
 To start over the HTML page generation:
 ```
 rm -rf _build
-make html
 make dirhtml
+make html
 ```
 You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
+
+Downloadable attachment files
+-----------------------------
+
+In [MoinMoin][1] attachment files can be added to a Wiki page, 
+You refer to the attachment like this:
+```
+The latest version of FooBar is available as FooBar.tar.gz__
+__ attachment:FooBar.tar.gz
+```
+
+[Sphinx][2] has a different method (role) to [reference downloadable files][8].
+The equivalent method is:
+```
+The latest version of FooBar is available as :download:`FooBar.tar.gz <FooBar.tar.gz>`
+```
+where the file referenced must be found in the current directory.
+
+[8]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#referencing-downloadable-files
