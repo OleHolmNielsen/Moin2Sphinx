@@ -52,7 +52,8 @@ Moin-server$ writefiles.sh <wikiname>
 ```
 where the ```<wikiname>``` is one of the Wikis in /var/moin.
 
-The [writefiles.sh](writefiles.sh) script generates a tar-ball of the newest files in /var/moin/```<wikiname>```/data/pages/.
+The [writefiles.sh](writefiles.sh) script generates a tar-ball ```<wikiname>.tar.gz```
+of the newest files from /var/moin/```<wikiname>```/data/pages/.
 It will ignore all older files (previous page revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
 we simply copy the files and append an ```.rst``` extension.
@@ -86,7 +87,7 @@ pip3 install sphinx
 Convert the RST files into Sphinx format
 ----------------------------------------
 
-Copy the tar-ball generated above to the current directory.
+Copy the tar-ball ```<wikiname>.tar.gz``` generated above to the current directory.
 
 Define some predefined author names as an environment variable:
 ```
