@@ -108,8 +108,8 @@ This script will perform these steps:
   and then generates a complete documentation directory and sample ```Makefile``` to be used with [sphinx-build][6].
   We are going to set the [Sphinx][2] *Project name* to ```<wikiname>``` (with first letter capitalized), and the version to 1.0.
 
-* Runs the script [moin2sphinx.py](moin2sphinx.py) to convert the RST files in subfolder ```<wikiname>``` to [Sphinx][2] format
-  into the folder ```<wikiname>```-sphinx.
+* Runs the script [moin2sphinx.py](moin2sphinx.py) to convert the [MoinMoin][1] RST files
+  in subfolder ```<wikiname>``` to [Sphinx][2] format into the folder ```<wikiname>```-sphinx.
 
 [5]: https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html
 [6]: https://www.sphinx-doc.org/en/master/man/sphinx-build.html
@@ -155,8 +155,9 @@ Generate HTML pages
 
 Go to the ```<wikiname>```-sphinx folder and do a *make* to execute [sphinx-build][6] and generate the HTML pages:
 ```
-make html
 make dirhtml
+or:
+make html
 ```
 The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages, but with a single directory per document in ```_build/dirhtml/```.
 Makes for prettier URLs (no .html) if served from a webserver.
