@@ -204,7 +204,7 @@ Correcting Sphinx errors with MoinMoin RST files
 
 There may be several errors and warnings from [Sphinx][2] while HTML pages are generated:
 
-* ```ERROR: Unknown target name:```
+* ```ERROR: Unknown target name:```   
   See [Add cross-page links to the MoinMoin pages](#add-cross-page-links-to-the-moinmoin-pages) above
   and [Use a custom anchor][10] for a description.
 
