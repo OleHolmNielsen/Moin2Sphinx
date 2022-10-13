@@ -211,6 +211,8 @@ There may be several errors and warnings from [Sphinx][2] while HTML pages are g
 * ```ERROR: Anonymous hyperlink mismatch:```   
   See the section [Downloadable attachment files](#downloadable-attachment-files) below.
 
+These types of errors are simplest to correct by manually editing the [Sphinx][2] RST file.
+
 Downloadable attachment files
 -----------------------------
 
