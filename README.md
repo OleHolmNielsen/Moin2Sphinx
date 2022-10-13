@@ -13,8 +13,8 @@ Other file formats are also possible, but are not considered here.
 [2]: https://www.sphinx-doc.org/en/master/
 [3]: https://docutils.sourceforge.io/rst.html
 
-Add information to MoinMoin pages
----------------------------------
+Add cross-page links to the MoinMoin pages
+------------------------------------------
 
 While the [sphinx-build][6] tool (used below) can parse most [MoinMoin][1] pages,
 there are some cases where we have to insert extra information into some MoinMoin RST pages:
@@ -30,7 +30,14 @@ RST Overview
 NOTE: This is *only* required for sections that are linked to, and *not* for all sections!
 
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
-See [Use a custom anchor](https://sublime-and-sphinx-guide.readthedocs.io/en/latest/references.html#use-a-custom-anchor) for a description.
+See [Use a custom anchor][10] for a description.
+
+In a :ref: command, you then use the anchor text. For example:
+```
+This is a link to the RST Overview: :ref:`RST Overview`
+```
+
+[10]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html
 
 Extract RST files from MoinMoin
 -------------------------------
@@ -191,6 +198,15 @@ make dirhtml
 make html
 ```
 You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
+
+Correcting Sphinx errors with MoinMoin RST files
+================================================
+
+There may be several errors and warnings from [Sphinx][2] while HTML pages are generated:
+
+* See [Add cross-page links to the MoinMoin pages](#add-cross-page-links-to-the-moinmoin-pages) above.
+
+See [Use a custom anchor][10] for a description.
 
 Downloadable attachment files
 -----------------------------
