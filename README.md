@@ -208,6 +208,9 @@ There may be several errors and warnings from [Sphinx][2] while HTML pages are g
   See [Add cross-page links to the MoinMoin pages](#add-cross-page-links-to-the-moinmoin-pages) above
   and [Use a custom anchor][10] for a description.
 
+* ```ERROR: Anonymous hyperlink mismatch:```   
+  See the section [Downloadable attachment files](#downloadable-attachment-files) below.
+
 Downloadable attachment files
 -----------------------------
 
