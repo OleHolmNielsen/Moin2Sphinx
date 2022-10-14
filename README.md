@@ -31,8 +31,7 @@ NOTE: This is *only* required for sections that are linked to, and *not* for all
 
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
 See [Use a custom anchor][10] for a description.
-
-In a :ref: command, you then use the anchor text. For example:
+In a [Sphinx][2]  ```:ref:``` command, you then use the anchor text, for example:
 ```
 This is a link to the RST Overview: :ref:`RST Overview`
 ```
