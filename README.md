@@ -188,8 +188,8 @@ The HTML pages will be built in the ```_build/html/``` and ```_build/dirhtml/```
 which you can use in a browser, for example:
 
 ```
-firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/html/index.html
-firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/dirhtml/index.html
+firefox file://<path-to-project>/<wikiname>-sphinx/_build/html/index.html
+firefox file://<path-to-project>/<wikiname>-sphinx/_build/dirhtml/index.html
 ```
 Or copy the files to a web-server,
 for which this addition to the ```Makefile``` may be useful:
