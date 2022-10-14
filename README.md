@@ -31,7 +31,7 @@ NOTE: This is *only* required for sections that are linked to, and *not* for all
 
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
 See [Use a custom anchor][10] for a description.
-In a [Sphinx][2]  ```:ref:``` command, you then use the anchor text, for example:
+In a [Sphinx][2]  ```:ref:``` command you then use the anchor text, for example:
 ```
 This is a link to the RST Overview: :ref:`RST Overview`
 ```
@@ -41,7 +41,7 @@ This is a link to the RST Overview: :ref:`RST Overview`
 Extract RST files from MoinMoin
 -------------------------------
 
-[MoinMoin][1] stores its Wikis in a top-level directory, and we assume here that the /var/moin directory is used.
+[MoinMoin][1] stores its Wikis in a top-level directory, and we assume here that the ```/var/moin``` directory is used.
 The [writefiles.sh](writefiles.sh) script should be edited for the needs of your Wiki:
 
 * First you must edit the script to omit these page patterns and add other pages/patterns that you do not want to convert:
@@ -52,14 +52,14 @@ OMIT_PATTERNS="HelpOnMacros WikiCourse AdminGroup BadContent "
 * Also, some [MoinMoin][1] directories have separators such as (2d), (2e) of (2f), and these are rewritten in the script.
   Look for the ```mungedname=``` line and add any additional rewritings as needed for your Wiki.
 
-Now execute the [writefiles.sh](writefiles.sh) script on the server where /var/moin is located:
+Now execute the [writefiles.sh](writefiles.sh) script on the server where ```/var/moin``` is located:
 ```
 Moin-server$ writefiles.sh <wikiname>
 ```
-where the ```<wikiname>``` is one of the Wikis in /var/moin.
+where the ```<wikiname>``` is one of the Wikis in ```/var/moin```.
 
 The [writefiles.sh](writefiles.sh) script generates a tar-ball ```<wikiname>.tar.gz```
-of the newest files from /var/moin/```<wikiname>```/data/pages/.
+of the newest files from ```/var/moin/<wikiname>/data/pages/```.
 It will ignore all older files (previous page revisions).
 Since there does not seem to be any way to detect whether a file is in RST format or some other format,
 we simply copy the files and append an ```.rst``` extension.
