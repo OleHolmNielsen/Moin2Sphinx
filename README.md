@@ -151,9 +151,11 @@ There are also externally provided themes such as the [sphinx-rtd-theme][9] whic
 ```
 pip install sphinx-rtd-theme
 ```
-and define in ```conf.py``` or ```conf.py_t``` with:
+and configure it in ```conf.py``` or ```conf.py_t``` with
+(notice that the _ replaces -):
 ```
-html_theme = 'sphinx-rtd-theme'
+extensions = [ 'sphinx_rtd_theme', ]
+html_theme = 'sphinx_rtd_theme'
 ```
 
 [9]: https://github.com/readthedocs/sphinx_rtd_theme
