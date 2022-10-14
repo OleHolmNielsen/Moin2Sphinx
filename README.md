@@ -191,9 +191,15 @@ which you can use in a browser, for example:
 firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/html/index.html
 firefox file://<path-to-project>/```<wikiname>```-sphinx/_build/dirhtml/index.html
 ```
-or copy the files to a web-server.
+Or copy the files to a web-server,
+for which this addition to the ```Makefile``` may be useful:
+```
+dirhtml:
+rsync: dirhtml
+	rsync -av --delete ./_build/dirhtml/ web-server:/var/www/<wikiname>/
+```
 
-To start over the HTML page generation:
+To start over the HTML page generation from scratch:
 ```
 rm -rf _build
 make dirhtml
