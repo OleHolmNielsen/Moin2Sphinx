@@ -13,6 +13,14 @@ then
 	exit 1
 fi
 
+# We need the dos2unix tool to convert CR/LF from MoinMoin files to LF
+if [[ ! `which dos2unix` ]]
+then
+        echo "The dos2unix tool is missing, please install it."
+        exit 1
+fi
+
+
 # This is the MoinMoin Wiki pages which we are copying:
 WIKI=$1
 
@@ -69,6 +77,8 @@ do
 		latest=`ls -At | head --lines=1`
 		# Copy file with perserved timestamp
 		cp --preserve=timestamps $latest $RSTDIR/$mungedname.rst
+		# Convert CR/LF from MoinMoin files to LF
+		dos2unix $RSTDIR/$mungedname.rst
 		echo Copied $rev/$latest to $mungedname.rst
 		popd > /dev/null
 	fi
