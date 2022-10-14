@@ -161,25 +161,26 @@ html_theme = 'sphinx_rtd_theme'
 [9]: https://github.com/readthedocs/sphinx_rtd_theme
 
 When you run the [moin2sphinx.sh](moin2sphinx.sh) script, it will use the
-current directory for [sphinx-quickstart][5] templates like:
+current directory ```.``` for [sphinx-quickstart][5] templates like:
 ```
 sphinx-quickstart --templatedir . <further options...>
 ```
-and pick up the ```conf.py_t``` template file and use it when creating a new ```<wikiname>-sphinx/conf.py```.
+and pick up the ```conf.py_t``` template file and use it
+when creating a new ```<wikiname>-sphinx/conf.py```.
 
 [7]: https://www.sphinx-doc.org/en/master/usage/theming.html
 
 Generate HTML pages
 -------------------
 
-Go to the ```<wikiname>```-sphinx folder and do a *make* to execute [sphinx-build][6] and generate the HTML pages:
+Go to the ```<wikiname>```-sphinx folder and and generate HTML pages using [sphinx-build][6]:
 ```
 make dirhtml
 or:
 make html
 ```
-The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages, but with a single directory per document in ```_build/dirhtml/```.
-Makes for prettier URLs (no .html) if served from a webserver.
+The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages with a single directory per document in ```_build/dirhtml/```.
+This makes for prettier URLs (no .html) if served from a webserver.
 Also, this will make the web-page URLs have the same names as with [MoinMoin][1]
 (otherwise you will have to use .html URLs).
 
