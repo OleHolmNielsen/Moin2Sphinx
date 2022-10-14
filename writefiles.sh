@@ -27,7 +27,7 @@ WIKI=$1
 # Output tar-ball file
 TARFILE=/tmp/$WIKI.tar.gz
 # We omit these page patterns
-OMIT_PATTERNS="HelpOnMacros WikiCourse Building_a_Cluster AdminGroup BadContent Old_ Cluster_software Singularity niflheim6 SystemImager X11_on_Windows"
+OMIT_PATTERNS="HelpOnMacros WikiCourse Building_a_Cluster AdminGroup BadContent Old_ Cluster_software Singularity niflheim6 SystemImager X11_on_Windows Batch_jobs Compilers Installed_software Parallelization"
 
 # Location of MoinMoin page directories
 TOPDIR=$MOINDIR/$WIKI/data/pages
