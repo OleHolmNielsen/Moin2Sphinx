@@ -9,6 +9,13 @@ then
 	exit 1
 fi
 
+# If you do NOT want to use a Python Virtual Environment, comment out this check:
+if [[ -z "$VIRTUAL_ENV" ]]
+then
+	echo "ERROR: This script is NOT running within a Python Virtual Environment, see README.md"
+	exit 1
+fi
+
 # This is the MoinMoin Wiki pages which we are copying:
 WIKI=$1
 TARBALL=$WIKI.tar.gz
