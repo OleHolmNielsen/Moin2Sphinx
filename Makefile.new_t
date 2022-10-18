@@ -1,5 +1,5 @@
 # Customized makefile for Sphinx documentation
-#
+# based upon .../site-packages/sphinx/templates/quickstart/Makefile.new_t
 
 # You can set these variables from the command line, and also
 # from the environment for the first two.
