@@ -19,6 +19,8 @@ else
 $(error VIRTUAL_ENV not set! Please use a Python virtual environment: . venv/bin/activate )
 endif
 
+# Rsync HTML files.
+# The destination directory is WEBTOPDIR + the name of the current directory $PWD
 rsync: dirhtml
 	@echo Rsyncing HTML pages to ${WEBTOPDIR}/`basename $$PWD`/
 	@rsync -av --delete ./_build/dirhtml/ ${WEBTOPDIR}/`basename $$PWD`/
