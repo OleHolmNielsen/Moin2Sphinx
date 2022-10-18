@@ -190,8 +190,6 @@ Generate HTML pages
 Go to the ```<wikiname>```-sphinx folder and and generate HTML pages using [sphinx-build][6]:
 ```
 make dirhtml
-or:
-make html
 ```
 The ```make dirhtml``` command makes [sphinx-build][6] build HTML pages with a single directory per document in ```_build/dirhtml/```.
 This makes for prettier URLs (no .html) if served from a webserver.
@@ -205,13 +203,15 @@ which you can use in a browser, for example:
 firefox file://<path-to-project>/<wikiname>-sphinx/_build/html/index.html
 firefox file://<path-to-project>/<wikiname>-sphinx/_build/dirhtml/index.html
 ```
-or copy the files to a web-server.
+or copy the files to a web-server using this customized ```Makefile``` rule:
+```
+make rsync
+```
 
 To start over the HTML page generation from scratch in the ```<wikiname>```-sphinx folder:
 ```
 rm -rf _build
 make dirhtml
-make html
 ```
 You can also delete the ```<wikiname>```-sphinx folder and repeat the [moin2sphinx.sh](moin2sphinx.sh) script starting as above.
 
