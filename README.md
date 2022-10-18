@@ -199,6 +199,18 @@ rsync: dirhtml
 	rsync -av --delete ./_build/dirhtml/ web-server:/var/www/<wikiname>/
 ```
 
+It is also useful to have the ```Makefile``` check that you did not forget to activate your Python virtual environment.
+Insert this as the first rule of the ```Makefile```:
+
+```
+ifneq ($(VIRTUAL_ENV),)
+dirhtml:
+else
+$(error VIRTUAL_ENV not set! Please use the Python virtual environment: . venv/bin/activate)
+endif
+```
+
+
 To start over the HTML page generation from scratch:
 ```
 rm -rf _build
