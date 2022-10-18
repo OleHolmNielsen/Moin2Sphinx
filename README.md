@@ -31,12 +31,13 @@ NOTE: This is *only* required for sections that are linked to, and *not* for all
 
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
 See [Use a custom anchor][10] for a description.
-In a [Sphinx][2]  ```:ref:``` command you then use the anchor text, for example:
+In a [Sphinx][2] [ref][11] command you then use the anchor text, for example:
 ```
 This is a link to the RST Overview: :ref:`RST Overview`
 ```
 
 [10]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html
+[11]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref
 
 Extract RST files from MoinMoin
 -------------------------------
@@ -200,7 +201,6 @@ The HTML pages will be built in the ```_build/html/``` and ```_build/dirhtml/```
 which you can use in a browser, for example:
 
 ```
-firefox file://<path-to-project>/<wikiname>-sphinx/_build/html/index.html
 firefox file://<path-to-project>/<wikiname>-sphinx/_build/dirhtml/index.html
 ```
 or copy the files to a web-server using this customized ```Makefile``` rule:
