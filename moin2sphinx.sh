@@ -72,6 +72,10 @@ echo "The project name will be ${WIKI^}"
 cd ${SPHINXDIR}
 python3 moin2sphinx.py ../${WIKI}/ . ${WIKI^}
 
+echo "Copy all attachments to a new attachments directory"
+mkdir -pv attachments
+cp --no-clobber --preserve=timestamps ../${WIKI}/attachments/* attachments/
+
 cat <<EOF
 Now you can go to ${SPHINXDIR} 
 Review and edit the index file index.rst to order lines as you prefer.

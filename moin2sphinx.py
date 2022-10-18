@@ -44,6 +44,7 @@ def add_title(text, rst):
 def convert(moin: Path, sphinx: Path):
     pages = []
     links = {}
+    # Convert RST files
     for p in moin.glob('*.rst'):
         name = normalize(p.stem)
         links[name] = p
@@ -51,15 +52,14 @@ def convert(moin: Path, sphinx: Path):
         text = p.read_text()
         pages.append((rst, text))
 
-    for p in moin.glob('attachments/*'):
-        (sphinx / p.name).write_bytes(p.read_bytes())
-
+    # Fix links in RST pages
     for rst, text in pages:
         text = add_title(text, rst)
         name=rst.stem
         text = f'.. _{name}:\n\n' + fix_links(text, links)
         rst.write_text(text)
 
+    # Create an index.rst main page
     text = f"Welcome to the {wikiname} documentation"
     l = len(text)
     text += "\n"
