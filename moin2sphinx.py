@@ -4,6 +4,7 @@ from pathlib import Path
 
 
 def normalize(name: str) -> str:
+    name = name.replace('(20)', '_')
     name = name.replace('(2d)', '-')
     name = name.replace('(2e)', '.')
     name = name.replace('(2f)', '/')
