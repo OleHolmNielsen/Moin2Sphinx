@@ -78,7 +78,7 @@ do
 		# Copy file with perserved timestamp
 		cp --preserve=timestamps $latest $RSTDIR/$mungedname.rst
 		# Convert CR/LF from MoinMoin files to LF
-		dos2unix --quiet $RSTDIR/$mungedname.rst
+		dos2unix --quiet --keepdate $RSTDIR/$mungedname.rst
 		echo Copied $rev/$latest to $mungedname.rst
 		popd > /dev/null
 	fi
