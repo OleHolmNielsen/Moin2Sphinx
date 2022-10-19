@@ -72,6 +72,12 @@ echo "The project name will be ${WIKI^}"
 cd ${SPHINXDIR}
 python3 moin2sphinx.py ../${WIKI}/ . ${WIKI^}
 
+# Reset the RST file timestamps to the original values
+for f in *.rst
+do
+	touch --reference=../${WIKI}/$f $f
+done
+
 echo "Copy all attachments to a new attachments directory"
 mkdir -pv attachments
 cp --no-clobber --preserve=timestamps ../${WIKI}/attachments/* attachments/
