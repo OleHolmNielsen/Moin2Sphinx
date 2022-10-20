@@ -16,7 +16,7 @@ Other file formats are also possible, but are not considered here.
 Add cross-page links to the MoinMoin pages
 ------------------------------------------
 
-While the [sphinx-build][6] tool (used below) can parse most [MoinMoin][1] pages,
+While the [sphinx-build][6] tool (used below) can parse most [MoinMoin][1] RST pages,
 there are some cases where we have to insert extra information into some MoinMoin RST pages:
 
 * Cross-page links to section headings in other pages need to have a *custom anchor* inserted above the section heading,
@@ -27,7 +27,7 @@ there are some cases where we have to insert extra information into some MoinMoi
 RST Overview
 ============
 ```
-NOTE: This is *only* required for sections that are linked to, and *not* for all sections!
+NOTE: This is *only* required for sections that are linked to from other pages, and *not* for all sections!
 
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
 See [Use a custom anchor][10] for a description.
@@ -55,7 +55,7 @@ OMIT_PATTERNS="HelpOnMacros WikiCourse AdminGroup BadContent "
 
 Now execute the [writefiles.sh](writefiles.sh) script on the server where ```/var/moin``` is located:
 ```
-Moin-server$ writefiles.sh <wikiname>
+Moin-server$ ./writefiles.sh <wikiname>
 ```
 where the ```<wikiname>``` is one of the Wikis in ```/var/moin```.
 
@@ -203,7 +203,7 @@ which you can use in a browser, for example:
 ```
 firefox file://<path-to-project>/<wikiname>-sphinx/_build/dirhtml/index.html
 ```
-or copy the files to a web-server using this customized ```Makefile``` rule:
+or copy the files to a web-server using this customized ```Makefile``` rule from the above [Makefile.new_t](Makefile.new_t):
 ```
 make rsync
 ```
