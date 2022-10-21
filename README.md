@@ -172,6 +172,7 @@ and configure it in ```conf.py``` or ```conf.py_t``` with
 extensions = [ 'sphinx_rtd_theme', ]
 html_theme = 'sphinx_rtd_theme'
 ```
+See also the [Sphinx Configuration](https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html) page.
 
 [9]: https://github.com/readthedocs/sphinx_rtd_theme
 
