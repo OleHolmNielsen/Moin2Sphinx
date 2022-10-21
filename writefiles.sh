@@ -68,7 +68,7 @@ do
 	done
 	# echo Processing directory $TOPDIR/$dir
 	# Munge the Moin directory names with "(2?)" and other patterns
-	mungedname=`echo $dir | sed -e '/(2d)/s//-/g' -e '/(2e)/s//./g' -e '/(2f)/s//-/g' -e '/Niflheim7/s//Niflheim/'`
+	mungedname=`echo $dir | sed -e '/(2d)/s//-/g' -e '/(2e)/s//./g' -e '/(2f)/s//-/g' -e '/(20)/s//_/g'`
 	rev=$dir/revisions
 	# Copy the newest revision of the RST file
 	if [[ -d $rev ]]
