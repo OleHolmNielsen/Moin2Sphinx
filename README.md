@@ -27,7 +27,8 @@ there are some cases where we have to insert extra information into some MoinMoi
 RST Overview
 ============
 ```
-NOTE: This is *only* required for sections that are linked to from other pages, and *not* for all sections!
+
+Please read the [reStructuredText Primer][12] about *Sections*, *Paragraphs* and other topics.
 
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
 See [Use a custom anchor][10] for a description.
@@ -35,9 +36,11 @@ In a [Sphinx][2] [ref][11] command you then use the anchor text, for example:
 ```
 This is a link to the RST Overview: :ref:`RST Overview`
 ```
+NOTE: This is *only* required for sections that are linked to from other pages, and *not* for all sections!
 
 [10]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html
 [11]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref
+[12]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 
 Extract RST files from MoinMoin
 -------------------------------
