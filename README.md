@@ -9,9 +9,12 @@ to the [Sphinx][2] documentation generator.
 It is assumed that the [MoinMoin][1] v1.9.x Wiki content is using [Restructured Text][3] (RST) files.
 Other file formats are also possible, but are not considered here.
 
+Please read the [reStructuredText Primer][12] about *Sections*, *Paragraphs* and other topics.
+
 [1]: https://moinmo.in/
 [2]: https://www.sphinx-doc.org/en/master/
 [3]: https://docutils.sourceforge.io/rst.html
+[12]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 
 Add cross-page links to the MoinMoin pages
 ------------------------------------------
@@ -28,8 +31,6 @@ RST Overview
 ============
 ```
 
-Please read the [reStructuredText Primer][12] about *Sections*, *Paragraphs* and other topics.
-
 In this way a reference to ```rst-overview``` can be made from any page using both [MoinMoin][1] as well as [Sphinx][2].
 See [Use a custom anchor][10] for a description.
 In a [Sphinx][2] [ref][11] command you then use the anchor text, for example:
@@ -40,7 +41,6 @@ NOTE: This is *only* required for sections that are linked to from other pages, 
 
 [10]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html
 [11]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-ref
-[12]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 
 Extract RST files from MoinMoin
 -------------------------------
