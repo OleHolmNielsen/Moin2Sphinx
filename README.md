@@ -239,15 +239,15 @@ Downloadable attachment files
 In [MoinMoin][1] attachment files can be added to a Wiki page, 
 You refer to the attachment like this:
 ```
-The latest version of FooBar is available as FooBar.tar.gz__
-__ attachment:FooBar.tar.gz
+The latest version of FooBar is available as FooBar__
+__ attachment:FooBar
 ```
 This seems to be a special feature of [MoinMoin][1].
 
 [Sphinx][2] has a different method (role) to [reference downloadable files][8].
 The way to include downloadable attachment files is:
 ```
-The latest version of FooBar is available as :download:`FooBar.tar.gz <FooBar.tar.gz>`
+The latest version of FooBar is available as :download:`FooBar <FooBar>`
 ```
 where the file referenced must be found in the current directory.
 
