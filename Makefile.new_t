@@ -25,6 +25,10 @@ rsync: dirhtml
 	@echo Rsyncing HTML pages to ${WEBTOPDIR}/`basename $$PWD`/
 	@rsync -av --delete ./_build/dirhtml/ ${WEBTOPDIR}/`basename $$PWD`/
 
+# This rule can be added to "dirhtml" above if the source files are in Git
+gitpull:
+	git pull
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
