@@ -9,7 +9,7 @@ if [[ $# -ne 1 ]]
 then
 	echo "Usage: $0 <wiki-name>"
 	echo "Directories in $MOINDIR may include some Wikis:"
-	ls -l $MOINDIR
+	ls -l $MOINDIR/
 	exit 1
 fi
 
