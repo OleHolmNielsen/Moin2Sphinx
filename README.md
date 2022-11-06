@@ -102,6 +102,12 @@ pip install --upgrade pip
 pip install sphinx
 ```
 
+Upgrade an existing installation of [Sphinx][2] :
+
+```
+pip install --upgrade sphinx
+```
+
 Alternatively, install Python3 RPM packages from the OS:
 ```
 yum install python3 python3-pip
