@@ -98,14 +98,18 @@ Activate it and install [Sphinx][2] :
 
 ```
 . venv/bin/activate
-pip install --upgrade pip
-pip install sphinx
+pip3 install --upgrade pip
+pip3 install sphinx
+```
+
+Check the [Sphinx][2] version by:
+```
+sphinx-build --version
 ```
 
 Upgrade an existing installation of [Sphinx][2] :
-
 ```
-pip install --upgrade sphinx
+pip3 install --upgrade sphinx
 ```
 
 Alternatively, install Python3 RPM packages from the OS:
@@ -189,7 +193,7 @@ html_theme = 'classic'
 ```
 There are also externally provided themes such as the [sphinx-rtd-theme][9] which you can install with:
 ```
-pip install sphinx-rtd-theme
+pip3 install sphinx-rtd-theme
 ```
 and configure it in ```conf.py``` or ```conf.py_t``` with
 (notice that the _ replaces -):
