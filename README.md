@@ -87,19 +87,19 @@ we simply copy the files and append an ```.rst``` extension.
 Setup a Python3 virtual environment
 -----------------------------------
 
-We will use a [Python3 virtual environment][4] to process RST files from [MoinMoin][1]:
-
+We will use a [Python3 virtual environment][4] to process RST files from [MoinMoin][1].
+On EL8 we recommend to use Python 3.9:
 ```
-yum install python3 
-python3 -m venv venv
+yum install python39
+python3.9 -m venv venv
 ```
 
 Activate it and install [Sphinx][2] :
 
 ```
 . venv/bin/activate
-pip3 install --upgrade pip
-pip3 install sphinx
+pip3.9 install --upgrade pip
+pip3.9 install sphinx
 ```
 
 Check the [Sphinx][2] version by:
@@ -109,7 +109,7 @@ sphinx-build --version
 
 Upgrade an existing installation of [Sphinx][2] :
 ```
-pip3 install --upgrade sphinx
+pip3.9 install --upgrade sphinx
 ```
 
 Alternatively, install Python3 RPM packages from the OS:
@@ -193,7 +193,7 @@ html_theme = 'classic'
 ```
 There are also externally provided themes such as the [sphinx-rtd-theme][9] which you can install with:
 ```
-pip3 install sphinx-rtd-theme
+pip3.9 install sphinx-rtd-theme
 ```
 and configure it in ```conf.py``` or ```conf.py_t``` with
 (notice that the _ replaces -):
