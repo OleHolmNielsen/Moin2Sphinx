@@ -7,6 +7,11 @@ This repository describes a method for migrating an existing Wiki site,
 implemented as a [MoinMoin][1] Wiki engine version 1.9.x (which is based on Python2) 
 to the [Sphinx][2] documentation generator.
 
+Requirement of Restructured Text
+---------------------------------
+
+**IMPORTANT:** This project **only** supports [Restructured Text][3] (RST) files!
+
 It is assumed that the [MoinMoin][1] v1.9.x Wiki content is using [Restructured Text][3] (RST) files.
 Please read the [reStructuredText Primer][12] about *Sections*, *Paragraphs* and other topics.
 
@@ -15,8 +20,8 @@ Please read the [reStructuredText Primer][12] about *Sections*, *Paragraphs* and
 [3]: https://docutils.sourceforge.io/rst.html
 [12]: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html
 
-Conversion of MoinMoin "wiki-markup" pages to RST
----------------------------------------------------------
+Conversion of MoinMoin "wiki-markup" pages to Restructured Text (RST)
+--------------------------------------------------------------------------
 
 The default markup in [MoinMoin][1] is the [wiki][13] markup, but other markups also exist.
 For use with [Sphinx][2] such pages would need to be converted to [Restructured Text][3] (RST).
