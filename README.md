@@ -227,13 +227,13 @@ when creating a new ```<wikiname>-sphinx/conf.py```.
 Open external links in new tabs of the browser in Sphinx HTML documents
 ------------------------------------------------------------------------------
 
-Installing the [sphinx-new-tab-link][10] project in the virtual environment
+Installing the [sphinx-new-tab-link][15] project in the virtual environment
 will open external links in new tabs of the browser in Sphinx HTML documents:
 ```
 pip3 install sphinx-new-tab-link
 ```
 
-[10]: https://pypi.org/project/sphinx-new-tab-link/
+[15]: https://pypi.org/project/sphinx-new-tab-link/
 
 Generate HTML pages
 -------------------
