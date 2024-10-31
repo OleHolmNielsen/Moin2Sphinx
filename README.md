@@ -232,6 +232,12 @@ will open external links in new tabs of the browser in [Sphinx][2] HTML document
 ```
 pip3 install sphinx-new-tab-link
 ```
+Then edit ```conf.py``` to use this extension.
+```
+extensions = [
+    "sphinx_new_tab_link",
+]
+```
 
 [15]: https://pypi.org/project/sphinx-new-tab-link/
 
