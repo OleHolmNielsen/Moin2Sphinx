@@ -228,7 +228,7 @@ Open external links in new tabs of the browser in Sphinx HTML documents
 ------------------------------------------------------------------------------
 
 Installing the [sphinx-new-tab-link][15] project in the virtual environment
-will open external links in new tabs of the browser in Sphinx HTML documents:
+will open external links in new tabs of the browser in [Sphinx][2] HTML documents:
 ```
 pip3 install sphinx-new-tab-link
 ```
