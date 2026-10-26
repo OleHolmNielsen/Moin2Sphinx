@@ -93,7 +93,8 @@ Setup a Python3 virtual environment
 -----------------------------------
 
 We will use a [Python3 virtual environment][4] to process RST files from [MoinMoin][1].
-On EL9 we recommend to use the distribution's Python 3.14:
+On EL9 we recommend to use the distribution's Python 3.14.
+Create a ```venv```:
 ```
 dnf install python3.14
 python3.14 -m venv venv
@@ -103,7 +104,7 @@ For the older EL8 we recommend to use Python 3.12:
 dnf install python3.12
 python3.12 -m venv venv
 ```
-Activate your ```venv``` and install [Sphinx][2] :
+Activate your ```venv```, upgrade ```pip```, and install [Sphinx][2] :
 ```
 . venv/bin/activate
 pip install --upgrade pip
@@ -113,8 +114,7 @@ Check the [Sphinx][2] version by:
 ```
 sphinx-build --version
 ```
-
-Upgrade an existing installation of [Sphinx][2] :
+To upgrade an existing installation of [Sphinx][2] :
 ```
 pip install --upgrade sphinx
 ```
@@ -123,7 +123,6 @@ There are also externally provided themes such as the [sphinx-rtd-theme][9] whic
 pip install sphinx_new_tab_link
 pip install sphinx-rtd-theme
 ```
-
 Not recommended:
 Alternatively, install Python3 RPM packages from the OS:
 ```
